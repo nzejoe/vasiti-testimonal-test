@@ -243,6 +243,50 @@
       }
     }
   }
+
+  .footer-main {
+    font-family: "Roboto";
+    font-style: normal;
+
+    .footer-main-inner {
+      h5 {
+        font-weight: 700;
+      }
+      .footer-links {
+        padding: 0;
+
+        li {
+          list-style: none;
+          padding: 0;
+          font-weight: 400;
+          font-size: 14px;
+          margin-bottom: 1rem;
+
+          a {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .social-icons {
+        .icon-container {
+          background-color: #fff;
+          color: #000;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 // END OF FOOTER
 
@@ -270,19 +314,29 @@
   }
 
   .footer {
-
     .subscribe-section {
-      .subscribe-info{
+      .subscribe-info {
         width: 452px;
         margin-top: 5rem;
         order: 1;
       }
 
-      .subscribe-banner{
+      .subscribe-banner {
         position: relative;
         top: -5rem;
       }
     }
+  }
+
+  .footer {
+    .footer-main {
+      .footer-main-inner {
+        div {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    padding-bottom: 2rem;
   }
 }
 
@@ -330,6 +384,15 @@
   .footer {
     .subscribe-section {
       padding: 3rem 0;
+    }
+
+    .footer-main {
+
+      .footer-main-inner {
+        div {
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 }
