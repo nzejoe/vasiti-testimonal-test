@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Container className="hero">
       <div className="hero-content d-md-flex">
-        <div className="hero-info ">
+        <div className="hero-info d-flex flex-column justify-content-center">
           <h1 className="hero-title">
             Amazing
             <br />

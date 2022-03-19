@@ -16,7 +16,7 @@ const CustomNavbar = () => {
               <Nav.Link href="#">stories</Nav.Link>
               <Nav.Link href="#">contact</Nav.Link>
               <Nav.Link href="#">log in</Nav.Link>
-              <Nav.Link href="#" className="sign-up-btn text-white">sign up</Nav.Link>
+              <Nav.Link href="#" className="active text-white">sign up</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -13,11 +13,11 @@
       padding-left: 1rem !important;
       padding-right: 1rem !important;
 
-      &:not(.sign-up-btn){
+      &:not(.active){
           color: #242120 !important;
       }
 
-      &.sign-up-btn{
+      &.active{
         background-color: $main-color !important;
     }
   }
@@ -40,6 +40,13 @@
     .hero-content{
         min-height: 100%;
         padding-top: 2rem;
+
+        .hero-info{
+            h1{
+                font-size: 3.5rem;
+                font-weight: 700;
+            }
+        }
 
         .hero-image{
             min-height: 100%;
