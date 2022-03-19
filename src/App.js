@@ -1,4 +1,4 @@
-import { CustomNavbar, CustomLinks, Header, Experience } from "./components";
+import { CustomNavbar, CustomLinks, Header, ExperienceStories } from "./components";
 
 import "./App.scss";
 
@@ -9,7 +9,7 @@ function App() {
       <main className="main-content">
         <CustomLinks />
         <Header />
-        <Experience/>
+        <ExperienceStories />
       </main>
     </div>
   );
