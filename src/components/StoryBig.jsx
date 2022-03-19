@@ -16,7 +16,7 @@ const StoryBig = ({ story}) => {
           </div>
           <div className="share-btn text-white">
             <button className="bg-transparent text-white border-0 mt-5">share your own story!</button>
-            <Image src="/images/vector 3.png"/>
+            <Image src="/images/vector 3.png" fluid/>
           </div>
         </div>
         <div className="story-image position-relative">

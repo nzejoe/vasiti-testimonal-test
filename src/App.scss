@@ -41,11 +41,11 @@
 // HERO
 .hero {
   overflow: hidden;
-  
-  .image-container{
+
+  .image-container {
     top: 2rem;
-    
-    &::before{
+
+    &::before {
       content: "";
       display: block;
       position: absolute;
@@ -54,13 +54,11 @@
       transform: translateX(-50%);
       width: 633.39px;
       height: 633.39px;
-      background: #FFF8F5;
+      background: #fff8f5;
       border-radius: 50%;
       z-index: -1;
-
     }
   }
-  
 }
 // END OF HERO
 
@@ -82,7 +80,6 @@
         h3 {
           font-style: normal;
           font-weight: 700;
-          font-size: 24px;
           line-height: 39px;
           /* identical to box height */
           letter-spacing: 0.01em;
@@ -101,7 +98,7 @@
             font-family: "Inter";
             font-style: normal;
             font-weight: 400;
-            font-size: 18px;
+            // font-size: 1rem;
             line-height: 150%;
             letter-spacing: 0.02em;
           }
@@ -111,10 +108,8 @@
           button {
             font-family: "Inter";
             font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 32px;
-            /* identical to box height, or 200% */
+            // font-weight: 500;
+            // font-size: 16px;
             letter-spacing: 0.2em;
             text-transform: uppercase;
           }
@@ -168,6 +163,7 @@
     .story-big {
       background-color: #000;
       color: #fff;
+      overflow: hidden;
 
       .badge {
         border: 1px solid rgba(255, 255, 255, 0.4);
@@ -348,6 +344,22 @@
     }
   }
   .experience-stories {
+    .story-big {
+      font-size: 0.68rem;
+
+      .story-inner {
+        .story-info {
+          h3 {
+            font-size: 1.5em !important;
+          }
+        }
+
+        .share-btn {
+          font-size: 1em;
+        }
+      }
+    }
+
     .section-2 {
       .story-big {
         .story-inner {
