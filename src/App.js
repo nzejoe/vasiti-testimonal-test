@@ -4,6 +4,7 @@ import {
   Header,
   ExperienceStories,
   SubscribSection,
+  FooterMain
 } from "./components";
 
 import "./App.scss";
@@ -19,6 +20,7 @@ function App() {
       </main>
       <footer className="footer">
         <SubscribSection />
+        <FooterMain/> 
       </footer>
     </div>
   );
