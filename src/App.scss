@@ -24,12 +24,18 @@
 }
 
 .custom-links {
-  max-width: 1440px;
-  .nav-link {
-    text-transform: uppercase;
-    color: #242120 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  
+  .custom-links-inner {
+    max-width: 1440px;
+    .nav-link {
+      text-transform: uppercase;
+      color: #242120 !important;
+    }
   }
 }
+
 // END OF NAVBAR
 
 // HERO
@@ -387,7 +393,6 @@
     }
 
     .footer-main {
-
       .footer-main-inner {
         div {
           margin-bottom: 2rem;
