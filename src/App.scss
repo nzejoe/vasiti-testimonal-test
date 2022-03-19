@@ -181,6 +181,10 @@
         border-radius: 4px;
       }
 
+      .story-info {
+        order: 1;
+      }
+
       .story-image {
         .eclipse {
           background-color: #2e2e2e;
@@ -219,6 +223,29 @@
 }
 // END OF EXPERIENCE SECTION
 
+// FOOTER
+.footer {
+  background-color: #25201d;
+  color: #fff;
+
+  .subscribe-section {
+    // min-height: 754px;
+
+    .form-control {
+      color: #242120;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+    }
+
+    .input-group-text {
+      button {
+        color: #242120;
+      }
+    }
+  }
+}
+// END OF FOOTER
+
 // COMPONENTS
 .text-upper {
   text-transform: uppercase;
@@ -239,6 +266,22 @@
     .story-image {
       top: 2rem;
       left: 4rem;
+    }
+  }
+
+  .footer {
+
+    .subscribe-section {
+      .subscribe-info{
+        width: 452px;
+        margin-top: 5rem;
+        order: 1;
+      }
+
+      .subscribe-banner{
+        position: relative;
+        top: -5rem;
+      }
     }
   }
 }
@@ -266,7 +309,7 @@
             border-radius: 50%;
             overflow: hidden;
 
-            img{
+            img {
               height: 100%;
               width: 100%;
               object-fit: contain;
@@ -275,12 +318,18 @@
               left: 2rem;
             }
 
-            .eclipse{
+            .eclipse {
               display: none;
             }
           }
         }
       }
+    }
+  }
+
+  .footer {
+    .subscribe-section {
+      padding: 3rem 0;
     }
   }
 }

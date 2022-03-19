@@ -16,8 +16,10 @@ function App() {
         <CustomLinks />
         <Header />
         <ExperienceStories />
-        <SubscribSection/>
       </main>
+      <footer className="footer">
+        <SubscribSection />
+      </footer>
     </div>
   );
 }
