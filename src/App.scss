@@ -1,5 +1,10 @@
 @import "./custom-styles/variables";
 
+.main-content{
+    font-family: 'Inter', sans-serif;
+}
+
+// NAVBAR
 .navbar {
   height: 80px;
 
@@ -24,4 +29,45 @@
        text-transform: uppercase;
        color: #242120 !important;
    } 
+}
+// END OF NAVBAR
+
+
+// HERO
+.hero{
+    height: 568px;
+
+    .hero-content{
+        min-height: 100%;
+        padding-top: 2rem;
+
+        .hero-image{
+            min-height: 100%;
+
+            .eclipse{
+                top: 0;
+                left: 0;
+                width: 711px;
+                height: 711px;
+                background-color: #FFF8F5;
+                border-radius: 50%;
+                z-index: -1;
+            }
+
+            .image-container{
+                top: 50%;
+                right: 0;
+                transform: translate(-0%, -50%);
+            }
+        }
+    }
+}
+// END OF HERO
+
+@media screen and (min-width: 768px){
+    .hero-content{
+        div{
+            flex: 0 0 calc(100% / 2);
+        }
+    }
 }
