@@ -1,33 +1,28 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
 
-import StoryBig from './StoryBig';
+import StoryBig from "./StoryBig";
+import StorySmall from "./StorySmall";
 
 // assets
-import { stories } from '../assets';
+import { stories } from "../assets";
 
 const ExperienceStories = () => {
   return (
     <div className="experience-stories">
       <div className="section-1">
         <StoryBig
-          author={stories[0].author}
-          badge={stories[0].badge}
-          text={stories[0].text}
-          image={stories[0].image}
-          className="text-white"
+          story={stories[0]}
         />
-        <div className="stories-small">
-          {stories.slice(1,7).map(story=>{
-            console.log(story)
-            return null
+        <Container className="story-small-list ">
+          {stories.slice(1, 7).map((story) => {
+            return <StorySmall key={story.id} story={story} />;
           })}
-        </div>
-        <div className="stories-small">
-
-        </div>
+        </Container>
+        <div className="stories-small"></div>
       </div>
     </div>
   );
-}
+};
 
 export default ExperienceStories;

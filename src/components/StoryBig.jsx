@@ -1,9 +1,10 @@
 import React from "react";
 import { Image, Container } from 'react-bootstrap'
 
-const StoryBig = ({ author, badge, text, image, className }) => {
+const StoryBig = ({ story}) => {
+  const {author, badge, text, image } = story;
   return (
-    <div className={`story-big pt-5 ${className}`}>
+    <div className={`story-big pt-5`}>
       <Container className="story-inner d-md-flex align-items-center  justify-content-between">
         <div className="story-info p-5">
           <div className="info-header">
