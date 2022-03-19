@@ -218,8 +218,6 @@
   color: #fff;
 
   .subscribe-section {
-    // min-height: 754px;
-
     .form-control {
       color: #242120;
       background: rgba(255, 255, 255, 0.2);
@@ -400,7 +398,26 @@
 
   .footer {
     .subscribe-section {
+      font-size: 0.5rem;
       padding: 3rem 0;
+
+      .subscribe-text {
+        width: 80%;
+      }
+
+      .subscribe-info {
+        .input-group{
+          .form-control{
+           font-size: small;
+         }
+
+         .input-group-text{
+           button{
+             font-size: small;
+           }
+         }
+        }
+      }
     }
 
     .footer-main {

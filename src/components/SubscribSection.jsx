@@ -10,7 +10,7 @@ import {
 
 const SubscribSection = () => {
   return (
-    <Container className="subscribe-section d-md-flex justify-content-around">
+    <Container className="subscribe-section d-md-flex justify-content-around px-3">
       <div className="subscribe-info">
         <div className="subscribe-header">
           <h1>
@@ -24,7 +24,7 @@ const SubscribSection = () => {
             Vasiti—thus, the world.
           </p>
         </div>
-        <Form className="d-flex mt-4">
+        <Form className="subscribe-form d-flex mt-4">
           <InputGroup>
             <FormControl
               type="search"
@@ -41,7 +41,7 @@ const SubscribSection = () => {
         </Form>
       </div>
       <div className="subscribe-banner mt-5 d-flex justify-content-center mb-0">
-        <Image src="/images/subscribe-banner 1.png" />
+        <Image src="/images/subscribe-banner 1.png" fluid/>
       </div>
     </Container>
   );
