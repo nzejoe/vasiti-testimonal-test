@@ -1,4 +1,4 @@
-import { CustomNavbar } from './components';
+import { CustomNavbar, CustomLinks } from "./components";
 
 import './App.scss';
 
@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <CustomNavbar/>
+      <CustomLinks/>
     </div>
   );
 }

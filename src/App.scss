@@ -1,4 +1,4 @@
-@import "./custom-styles/_variable";
+@import "./custom-styles/variables";
 
 .navbar {
   height: 80px;
@@ -16,4 +16,12 @@
         background-color: $main-color !important;
     }
   }
+}
+
+.custom-links{
+    max-width: 1440px;
+   .nav-link{
+       text-transform: uppercase;
+       color: #242120 !important;
+   } 
 }

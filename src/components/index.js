@@ -1,4 +1,5 @@
 import CustomNavbar from "./CustomNavbar";
-import { CustomLinks } from './CustomLinks'
+import CustomLinks from "./CustomLinks";
+import Header from "./Header";
 
-export { CustomNavbar }
+export { CustomNavbar, CustomLinks , Header};

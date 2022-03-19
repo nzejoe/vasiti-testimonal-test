@@ -11,7 +11,7 @@ const CustomNavbar = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto bg-white">
               <Nav.Link href="#">about us</Nav.Link>
               <Nav.Link href="#">stories</Nav.Link>
               <Nav.Link href="#">contact</Nav.Link>
