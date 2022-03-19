@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import StoryBig from './StoryBig';
 
 // assets
-import { stories as assetStories } from '../assets';
+import { stories } from '../assets';
 
 const ExperienceStories = () => {
-  const [stories, setStories] = useState(assetStories);
   return (
     <div className="experience-stories">
       <div className="section-1">
@@ -17,6 +16,12 @@ const ExperienceStories = () => {
           image={stories[0].image}
           className="text-white"
         />
+        <div className="stories-small">
+          {stories.slice(1,7).map(story=>{
+            console.log(story)
+            return null
+          })}
+        </div>
         <div className="stories-small">
 
         </div>
