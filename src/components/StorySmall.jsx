@@ -13,8 +13,8 @@ const StorySmall = ({ story }) => {
         <Card.Body>
           <Card.Title>{author}</Card.Title>
           <Card.Subtitle className="d-flex align-items-center text-upper mb-3">
-            {location && <div className="location">{`in ${location}`}</div>}
-            <div className={`ms-2 story-badge story-badge-${badge}`}>
+            {location && <div className="location me-2">{`in ${location}`}</div>}
+            <div className={`story-badge story-badge-${badge}`}>
               {badge}
             </div>
           </Card.Subtitle>

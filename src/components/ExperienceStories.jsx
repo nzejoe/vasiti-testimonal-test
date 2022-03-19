@@ -12,9 +12,20 @@ const ExperienceStories = () => {
     <div className="experience-stories">
       <div className="section-1">
         <StoryBig story={stories[0]} />
-        <Container className="story-small-list ">
+        <Container className="story-small-list pt-5">
           <Row md={3}>
             {stories.slice(1, 7).map((story) => {
+              return <StorySmall key={story.id} story={story} />;
+            })}
+          </Row>
+        </Container>
+        <div className="stories-small"></div>
+      </div>
+      <div className="section-2">
+        <StoryBig story={stories[7]} />
+        <Container className="story-small-list pt-5">
+          <Row md={3}>
+            {stories.slice(8, 14).map((story) => {
               return <StorySmall key={story.id} story={story} />;
             })}
           </Row>

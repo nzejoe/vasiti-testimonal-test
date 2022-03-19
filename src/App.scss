@@ -101,8 +101,6 @@
           font-size: 13px;
           line-height: 16px;
           letter-spacing: 0.02em;
-          border: 1px solid rgba(255, 255, 255, 0.4);
-          border-radius: 4px;
         }
 
         .info-text {
@@ -152,24 +150,24 @@
 
   .story-small {
     color: #474747;
-   
+
     .text-upper {
       font-size: 0.8rem;
       color: #535353;
 
-      .story-badge{
+      .story-badge {
         padding: 5px 10px;
         border-radius: 4px;
       }
 
-      .story-badge-customer{
-        background-color: #EEF8FF;
-        color: #0D019A;
+      .story-badge-customer {
+        background-color: #eef8ff;
+        color: #0d019a;
       }
 
-      .story-badge-vendor{
-        background-color: #F0FFEE;
-        color: #049A01;
+      .story-badge-vendor {
+        background-color: #f0ffee;
+        color: #049a01;
       }
     }
   }
@@ -178,9 +176,42 @@
       background-color: #000;
       color: #fff;
 
+      .badge {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 4px;
+      }
+
       .story-image {
         .eclipse {
           background-color: #2e2e2e;
+          top: 2rem;
+        }
+      }
+    }
+  }
+
+  .section-2 {
+    .story-big {
+      background-color: #fff8f5;
+      color: #242120;
+
+      .badge {
+        color: $main-color;
+        border: 1px solid rgba(255, 92, 0, 0.4);
+        border-radius: 4px;
+      }
+
+      .share-btn {
+        button {
+          color: $main-color !important;
+        }
+      }
+
+      .story-image {
+        .eclipse {
+          max-width: 600px;
+          max-height: 600px;
+          background: rgba(255, 92, 0, 0.03);
         }
       }
     }
@@ -194,10 +225,62 @@
 }
 // END OF COMPONENTS
 
+// DESKTOP SCREEN
+
 @media screen and (min-width: 768px) {
   .hero-content {
     div {
       flex: 0 0 calc(100% / 2);
+    }
+  }
+  .story-big {
+    overflow: hidden;
+
+    .story-image {
+      top: 2rem;
+      left: 4rem;
+    }
+  }
+}
+
+// MOBILE SCREEN
+@media screen and (max-width: 577px) {
+  .experience-stories {
+    .section-2 {
+      .story-big {
+        .story-inner {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .story-info {
+            order: 1;
+          }
+
+          .story-image {
+            width: 281px;
+            height: 281px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 92, 0, 0.03);
+            border-radius: 50%;
+            overflow: hidden;
+
+            img{
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+              object-position: bottom;
+              position: relative;
+              left: 2rem;
+            }
+
+            .eclipse{
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
 }
