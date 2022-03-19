@@ -1,31 +1,30 @@
-import React from 'react'
+import React from "react";
+import { Image, Container } from 'react-bootstrap'
 
-const ExperienceBig = () => {
+const StoryBig = ({ author, badge, text, image, className }) => {
   return (
-    <div className="experience text-white">
-      <div className="experience-inner">
-        <div className="experience-info">
+    <div className={`story-big pt-5 ${className}`}>
+      <Container className="story-inner d-md-flex align-items-center  justify-content-between">
+        <div className="story-info p-5">
           <div className="info-header">
-            <h3 className="mb-0">Tolu &amp; Joy’s Experience</h3>
-            <p className="badge">customer</p>
+            <h3 className="mb-0">{`${author}’s Experience`}</h3>
+            <p className="badge">{badge}</p>
           </div>
           <div className="info-text">
-            <p>
-              I had the best experience shopping with vasiti. Usability of the
-              website was great, very good customer service, an all round great
-              experience. I would definately be coming back! I had the best
-              experience shopping with vasiti. Usability of the website was
-              great, very good customer service, an all round great experience.
-              I would definately be coming back!
-            </p>
+            <p>{text}</p>
           </div>
-          <div className="share-btn">
-              <button>share your story!</button>
+          <div className="share-btn text-white">
+            <button className="bg-transparent text-white border-0 mt-5">share your own story!</button>
+            <Image src="/images/vector 3.png"/>
           </div>
         </div>
-      </div>
+        <div className="story-image position-relative">
+          <Image src={image} fluid />
+          <div className="eclipse"></div>
+        </div>
+      </Container>
     </div>
   );
-}
+};
 
-export default ExperienceBig;
+export default StoryBig;
