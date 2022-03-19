@@ -1,0 +1,19 @@
+@import "./custom-styles/_variable";
+
+.navbar {
+  height: 80px;
+
+  .nav-link {
+      text-transform: uppercase;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+
+      &:not(.sign-up-btn){
+          color: #242120 !important;
+      }
+
+      &.sign-up-btn{
+        background-color: $main-color !important;
+    }
+  }
+}
