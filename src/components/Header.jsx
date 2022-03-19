@@ -6,7 +6,7 @@ const Header = () => {
     <Container className="hero">
       <div className="hero-content d-md-flex">
         <div className="hero-info d-flex flex-column justify-content-center">
-          <h1 className="hero-title">
+          <h1 className="hero-title mb-3">
             Amazing
             <br />
             Experiences from Our Wonderful Customers
@@ -17,9 +17,8 @@ const Header = () => {
           </p>
         </div>
         <div className="hero-image position-relative">
-          <div className="eclipse position-absolute"></div>
-          <div className="image-container position-absolute">
-            <Image src="/images/Testimonial image 1.png" />
+          <div className="image-container position-relative">
+            <Image src="/images/Testimonial image 1.png" fluid/>
           </div>
         </div>
       </div>

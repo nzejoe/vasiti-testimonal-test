@@ -26,7 +26,7 @@
 .custom-links {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  
+
   .custom-links-inner {
     max-width: 1440px;
     .nav-link {
@@ -40,40 +40,27 @@
 
 // HERO
 .hero {
-  height: 568px;
+  overflow: hidden;
+  
+  .image-container{
+    top: 2rem;
+    
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 633.39px;
+      height: 633.39px;
+      background: #FFF8F5;
+      border-radius: 50%;
+      z-index: -1;
 
-  .hero-content {
-    min-height: 100%;
-    padding-top: 2rem;
-
-    .hero-info {
-      h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-      }
-    }
-
-    .hero-image {
-      min-height: 100%;
-
-      .eclipse {
-        top: 0;
-        left: 0;
-        width: 711px;
-        height: 711px;
-        background-color: #fff8f5;
-        border-radius: 50%;
-        z-index: -2;
-      }
-
-      .image-container {
-        top: 50%;
-        right: 0;
-        transform: translate(0%, -50%);
-        z-index: -1;
-      }
     }
   }
+  
 }
 // END OF HERO
 
@@ -348,6 +335,18 @@
 
 // MOBILE SCREEN
 @media screen and (max-width: 577px) {
+  .hero {
+    .hero-content {
+      min-height: 100%;
+      padding-top: 2rem;
+
+      .hero-info {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
   .experience-stories {
     .section-2 {
       .story-big {
