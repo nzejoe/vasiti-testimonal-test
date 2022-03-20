@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Modal, Button, Form, Row, Col } from 'react-bootstrap'
 
 const ShareStory = ({ isEditing, handleEditing }) => {
+  const [selectedIdentifier, setSelectedIdentifier] = useState('');
 
   const handleClose = () => {
       handleEditing(false);
   };
 
+  const handleIdentifier = (e) => {
+    const selected = e.target
+    if (selected.checked) setSelectedIdentifier(selected.id);
+  }
 
   return (
     <>
@@ -58,13 +63,14 @@ const ShareStory = ({ isEditing, handleEditing }) => {
               <Form.Label className="check-label">
                 What did you interact with Vasiti as?
               </Form.Label>
-              <div className='d-flex'>
+              <div className="d-flex">
                 <Form.Check
                   inline
                   label="Customer"
                   name="identifier"
                   type="radio"
                   id="customer"
+                  onChange={handleIdentifier}
                 />
                 <Form.Check
                   inline
@@ -72,6 +78,7 @@ const ShareStory = ({ isEditing, handleEditing }) => {
                   name="identifier"
                   type="radio"
                   id="vendor"
+                  onChange={handleIdentifier}
                 />
               </div>
             </Form.Group>

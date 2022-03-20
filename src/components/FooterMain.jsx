@@ -15,16 +15,16 @@ const FooterMain = () => {
           <h5 className="mb-3">Company</h5>
           <ul className="footer-links">
             <li>
-              <a href>About Us</a>
+              <button>About Us</button>
             </li>
             <li>
-              <a href>Term of Use</a>
+              <button>Term of Use</button>
             </li>
             <li>
-              <a href>Privacy Policy</a>
+              <button>Privacy Policy</button>
             </li>
             <li>
-              <a href>Press &amp; Media</a>
+              <button>Press &amp; Media</button>
             </li>
           </ul>
         </Col>
@@ -32,19 +32,19 @@ const FooterMain = () => {
           <h5 className="mb-3">Products</h5>
           <ul className="footer-links">
             <li>
-              <a href>Marketplace</a>
+              <button>Marketplace</button>
             </li>
             <li>
-              <a href>Magazine</a>
+              <button>Magazine</button>
             </li>
             <li>
-              <a href>Seller</a>
+              <button>Seller</button>
             </li>
             <li>
-              <a href>Wholesale</a>
+              <button>Wholesale</button>
             </li>
             <li>
-              <a href>Services</a>
+              <button>Services</button>
             </li>
           </ul>
         </Col>
@@ -52,16 +52,16 @@ const FooterMain = () => {
           <h5 className="mb-3">Career</h5>
           <ul className="footer-links">
             <li>
-              <a href>Become a Campus Rep</a>
+              <button>Become a Campus Rep</button>
             </li>
             <li>
-              <a href>Become a Vasiti Influencer</a>
+              <button>Become a Vasiti Influencer</button>
             </li>
             <li>
-              <a href>Become a Campus writer</a>
+              <button>Become a Campus writer</button>
             </li>
             <li>
-              <a href>Become an Affiliate</a>
+              <button>Become an Affiliate</button>
             </li>
           </ul>
         </Col>
@@ -69,16 +69,16 @@ const FooterMain = () => {
           <h5 className="mb-3">Get in touch</h5>
           <ul className="footer-links">
             <li>
-              <a href>Contact us</a>
+              <button>Contact us</button>
             </li>
             <li>
-              <a href>Partner with us</a>
+              <button>Partner with us</button>
             </li>
             <li>
-              <a href>Advertise with us</a>
+              <button>Advertise with us</button>
             </li>
             <li>
-              <a href>Help/FAQs</a>
+              <button>Help/FAQs</button>
             </li>
           </ul>
         </Col>
