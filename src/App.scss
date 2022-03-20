@@ -247,12 +247,10 @@
           padding: 0;
           font-weight: 400;
           font-size: 14px;
-          margin-bottom: 1rem;
 
           a {
-            &:hover {
-              cursor: pointer;
-            }
+            padding-left: 0;
+            color: #fff;
           }
         }
       }
@@ -278,35 +276,36 @@
 // END OF FOOTER
 
 // SHARE STORY
-.share-story{
-  form{
-    .form-text{
+.share-story {
+  form {
+    .form-text {
       color: #212529;
     }
 
-    .custom-input{
+    .custom-input {
       border: 1px solid #e0e0e0;
-      padding: .5rem;
+      padding: 0.5rem;
       border-radius: 4px;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
 
-    .check-label, .location-label{
-      font-size: .8rem;
+    .check-label,
+    .location-label {
+      font-size: 0.8rem;
     }
 
-    .submit-btn{
+    .submit-btn {
       background-color: $main-color;
       border: 1px solid $main-color;
     }
 
-    input[type=radio]:checked{
+    input[type="radio"]:checked {
       position: relative;
-      
-      &::before{
+
+      &::before {
         content: "";
         display: block;
         width: 1rem;
@@ -319,7 +318,7 @@
         z-index: 2;
       }
 
-      &::after{
+      &::after {
         content: "";
         display: block;
         width: 1.5rem;
@@ -352,7 +351,6 @@
 
     .hero-image {
       .image-container {
-        
         img {
           position: relative;
           left: 50%;

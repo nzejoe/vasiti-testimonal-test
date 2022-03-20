@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, NavLink } from "react-bootstrap";
 import {
   FaFacebookF,
   FaInstagram,
@@ -15,16 +15,16 @@ const FooterMain = () => {
           <h5 className="mb-3">Company</h5>
           <ul className="footer-links">
             <li>
-              <button>About Us</button>
+              <NavLink href="#">About Us</NavLink>
             </li>
             <li>
-              <button>Term of Use</button>
+              <NavLink href="#">Term of Use</NavLink>
             </li>
             <li>
-              <button>Privacy Policy</button>
+              <NavLink href="#">Privacy Policy</NavLink>
             </li>
             <li>
-              <button>Press &amp; Media</button>
+              <NavLink href="#">Press &amp; Media</NavLink>
             </li>
           </ul>
         </Col>
@@ -32,19 +32,19 @@ const FooterMain = () => {
           <h5 className="mb-3">Products</h5>
           <ul className="footer-links">
             <li>
-              <button>Marketplace</button>
+              <NavLink href="#">Marketplace</NavLink>
             </li>
             <li>
-              <button>Magazine</button>
+              <NavLink href="#">Magazine</NavLink>
             </li>
             <li>
-              <button>Seller</button>
+              <NavLink href="#">Seller</NavLink>
             </li>
             <li>
-              <button>Wholesale</button>
+              <NavLink href="#">Wholesale</NavLink>
             </li>
             <li>
-              <button>Services</button>
+              <NavLink href="#">Services</NavLink>
             </li>
           </ul>
         </Col>
@@ -52,16 +52,16 @@ const FooterMain = () => {
           <h5 className="mb-3">Career</h5>
           <ul className="footer-links">
             <li>
-              <button>Become a Campus Rep</button>
+              <NavLink href="#">Become a Campus Rep</NavLink>
             </li>
             <li>
-              <button>Become a Vasiti Influencer</button>
+              <NavLink href="#">Become a Vasiti Influencer</NavLink>
             </li>
             <li>
-              <button>Become a Campus writer</button>
+              <NavLink href="#">Become a Campus writer</NavLink>
             </li>
             <li>
-              <button>Become an Affiliate</button>
+              <NavLink href="#">Become an Affiliate</NavLink>
             </li>
           </ul>
         </Col>
@@ -69,16 +69,16 @@ const FooterMain = () => {
           <h5 className="mb-3">Get in touch</h5>
           <ul className="footer-links">
             <li>
-              <button>Contact us</button>
+              <NavLink href="#">Contact us</NavLink>
             </li>
             <li>
-              <button>Partner with us</button>
+              <NavLink href="#">Partner with us</NavLink>
             </li>
             <li>
-              <button>Advertise with us</button>
+              <NavLink href="#">Advertise with us</NavLink>
             </li>
             <li>
-              <button>Help/FAQs</button>
+              <NavLink href="#">Help/FAQs</NavLink>
             </li>
           </ul>
         </Col>

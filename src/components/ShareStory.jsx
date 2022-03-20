@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import {Modal, Button, Form, Row, Col } from 'react-bootstrap'
+import React, { useState } from "react";
+import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 
 const ShareStory = ({ isEditing, handleEditing }) => {
-  const [selectedIdentifier, setSelectedIdentifier] = useState('');
+  const [selectedIdentifier, setSelectedIdentifier] = useState("");
 
   const handleClose = () => {
-      handleEditing(false);
+    handleEditing(false);
   };
 
   const handleIdentifier = (e) => {
-    const selected = e.target
+    const selected = e.target;
     if (selected.checked) setSelectedIdentifier(selected.id);
-  }
+  };
 
   return (
     <>
@@ -27,7 +27,7 @@ const ShareStory = ({ isEditing, handleEditing }) => {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Group className="mb-3">
+            <Form.Group controlId="formFile" className="mb-3">
               <Form.Text className="d-block mb-2">
                 Upload your Picture
               </Form.Text>
@@ -89,7 +89,10 @@ const ShareStory = ({ isEditing, handleEditing }) => {
               <Form.Control type="text" />
             </Form.Group>
             <Form.Group>
-              <Button className="btn-lg submit-btn" onClick={handleClose}>
+              <Button
+                className="btn-lg float-end submit-btn"
+                onClick={handleClose}
+              >
                 Share your story!
               </Button>
             </Form.Group>
@@ -98,7 +101,6 @@ const ShareStory = ({ isEditing, handleEditing }) => {
       </Modal>
     </>
   );
-}
+};
 
-
-export default ShareStory
+export default ShareStory;
