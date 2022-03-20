@@ -33,7 +33,7 @@ const StoryBig = ({ story, addStoryHandler }) => {
           </div>
         </div>
         <div className="story-image position-relative">
-          <Image src={image} fluid />
+          <Image src={image} fluid  width={700}/>
           <div className="eclipse"></div>
         </div>
       </Container>

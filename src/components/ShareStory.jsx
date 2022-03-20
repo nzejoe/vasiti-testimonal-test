@@ -36,11 +36,12 @@ const ShareStory = ({ isEditing, handleEditing, addStoryHandler }) => {
     const lastName = lastNameRef.current && lastNameRef.current.value;
     const location = locationRef.current && locationRef.current.value;
     const text = textRef.current && textRef.current.value;
-    const name = `${firstName} ${lastName}`;
+    const author = `${firstName} ${lastName}`;
+    const imageURL = URL.createObjectURL(image);
     const data = {
       badge: selectedIdentifier,
-      image,
-      name,
+      image: imageURL,
+      author,
       text,
       location,
     };
