@@ -277,6 +277,26 @@
 }
 // END OF FOOTER
 
+// SHARE STORY
+.share-story{
+  form{
+    .form-text{
+      color: #212529;
+    }
+
+    .custom-input{
+      border: 1px solid #e0e0e0;
+      padding: .5rem;
+      border-radius: 4px;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+// END OF SHARE STORY
+
 // COMPONENTS
 .text-upper {
   text-transform: uppercase;

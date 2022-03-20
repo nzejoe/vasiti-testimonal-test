@@ -1,10 +1,10 @@
 import React from 'react'
-import {Modal, Button} from 'react-bootstrap'
+import {Modal, Button, Form, Row, Col} from 'react-bootstrap'
 
 const ShareStory = ({ isEditing, handleEditing }) => {
 
   const handleClose = () => {
-      handleEditing(false)
+      handleEditing(false);
   };
 
 
@@ -15,13 +15,45 @@ const ShareStory = ({ isEditing, handleEditing }) => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        className="share-story"
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Share your amazing story!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Text className="d-block mb-2">
+                Upload your Picture
+              </Form.Text>
+              <Form.Label className="custom-input d-block w-100">
+                Choose Image
+              </Form.Label>
+              <Form.Control type="file" placeholder="Enter email" hidden />
+            </Form.Group>
+
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>First Name</Form.Label>
+                  <Form.Control type="text" />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Last Name</Form.Label>
+                  <Form.Control type="text" />
+                </Form.Group>
+              </Col>
+            </Row>
+
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Check me out" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

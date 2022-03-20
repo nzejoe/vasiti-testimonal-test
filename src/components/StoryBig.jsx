@@ -4,7 +4,7 @@ import { Image, Container } from 'react-bootstrap'
 import ShareStory from "./ShareStory";
 
 const StoryBig = ({ story}) => {
-  const [ isEditing, setIsEditing ] = useState(false);
+  const [ isEditing, setIsEditing ] = useState(true);
   const {author, badge, text, image } = story;
 
   const handleSetEditing = (bool) => {
