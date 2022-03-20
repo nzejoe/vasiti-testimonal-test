@@ -284,11 +284,21 @@
 // END OF COMPONENTS
 
 // DESKTOP SCREEN
-
 @media screen and (min-width: 768px) {
   .hero-content {
     div {
       flex: 0 0 calc(100% / 2);
+    }
+
+    .hero-image {
+      .image-container {
+        
+        img {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
   }
   .story-big {
@@ -406,16 +416,16 @@
       }
 
       .subscribe-info {
-        .input-group{
-          .form-control{
-           font-size: small;
-         }
+        .input-group {
+          .form-control {
+            font-size: small;
+          }
 
-         .input-group-text{
-           button{
-             font-size: small;
-           }
-         }
+          .input-group-text {
+            button {
+              font-size: small;
+            }
+          }
         }
       }
     }

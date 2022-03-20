@@ -83,7 +83,7 @@ const FooterMain = () => {
           </ul>
         </Col>
         <Col>
-          <h5>Join our community</h5>
+          <h5 className="mb-3">Join our community</h5>
           <div className="social-icons mb-5 d-flex">
             <div className="icon-container me-2">
               <FaFacebookF />
