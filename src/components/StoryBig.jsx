@@ -32,7 +32,7 @@ const StoryBig = ({ story}) => {
           <div className="eclipse"></div>
         </div>
       </Container>
-      { isEditing && <ShareStory /> }
+      { isEditing && <ShareStory handleEditing={handleSetEditing} isEditing={isEditing}/> }
     </div>
   );
 };
