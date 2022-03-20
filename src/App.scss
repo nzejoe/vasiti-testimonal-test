@@ -332,9 +332,53 @@
         z-index: 1;
       }
     }
+
+    svg {
+      font-size: 1.5rem;
+
+      &.attachment-icon {
+        transform: rotate(-40deg);
+      }
+
+      &.clear-btn {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 // END OF SHARE STORY
+
+// ALREADY SHARED
+.already-shared {
+  font-family: 'inter';
+
+  .hurray-icon {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #fff8f5;
+    font-size: 5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-btn{
+    background-color: $main-color;
+    color: #fff;
+    padding: 1rem 5rem;
+    border: none;
+    text-transform: capitalize;
+
+    &:hover{
+      background-color: rgba($color: $main-color, $alpha: .9);
+      color: #fff;
+    }
+  }
+}
+// END OF ALREADY SHARED
 
 // COMPONENTS
 .text-upper {

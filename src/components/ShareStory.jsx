@@ -1,21 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 import { MdOutlineAttachment, MdClear } from "react-icons/md";
 
-const ShareStory = ({ isEditing, handleEditing }) => {
+const ShareStory = ({ isEditing, handleEditing, addStoryHandler }) => {
   const [selectedIdentifier, setSelectedIdentifier] = useState("");
-  const [image, setImage] = useState('');
+  const [alreadyReviewed, setAlreadyReviewed] = useState(false);
+  const [image, setImage] = useState("");
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
   const textRef = useRef(null);
   const locationRef = useRef(null);
   const imageRef = useRef(null);
 
-
-
   const handleClose = () => {
     handleEditing(false);
-    handleSubmit();
   };
 
   const handleIdentifier = (e) => {
@@ -28,8 +26,9 @@ const ShareStory = ({ isEditing, handleEditing }) => {
   };
 
   const handleClearImage = (e) => {
-    setImage('');
-    if(imageRef.current) imageRef.current.value = null;
+    setImage("");
+    // reset file input
+    if (imageRef.current) imageRef.current.value = null;
   };
 
   const handleSubmit = () => {
@@ -45,109 +44,137 @@ const ShareStory = ({ isEditing, handleEditing }) => {
       text,
       location,
     };
-    console.log(data);
+    addStoryHandler(data);
+    setAlreadyReviewed(true);
   };
 
   return (
     <>
-      <Modal
-        show={isEditing}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-        className="share-story"
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Share your amazing story!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group controlId="formFile" className="mb-3">
-              <Form.Text className="d-block mb-2">
-                Upload your Picture
-              </Form.Text>
-              <span className="icon-container float-end mt-2 me-3">
-                {image ? (
-                  <MdClear onClick={handleClearImage} />
-                ) : (
-                  <MdOutlineAttachment />
-                )}
-              </span>
-              <Form.Label className="custom-input d-block w-100 ">
-                <div className="file-label">
-                  {image ? image.name : "Choose Image"}
-                </div>
-              </Form.Label>
-              <Form.Control type="file" ref={imageRef} hidden onChange={handleFileChange} />
-            </Form.Group>
-
-            <Row>
-              <Col>
-                <Form.Group className="mb-3">
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control type="text" ref={firstNameRef} />
-                </Form.Group>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3">
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control type="text" ref={lastNameRef} />
-                </Form.Group>
-              </Col>
-            </Row>
-
-            <Form.Group className="mb-3">
-              <Form.Label>Share your story</Form.Label>
-              <textarea
-                className="form-control"
-                rows={3}
-                ref={textRef}
-              ></textarea>
-            </Form.Group>
-            <Form.Group
-              className="mb-3 d-flex justify-content-between"
-              controlId="formBasicCheckbox"
-            >
-              <Form.Label className="check-label">
-                What did you interact with Vasiti as?
-              </Form.Label>
-              <div className="d-flex">
-                <Form.Check
-                  inline
-                  label="Customer"
-                  name="identifier"
-                  type="radio"
-                  id="customer"
-                  onChange={handleIdentifier}
+      {!alreadyReviewed ? (
+        <Modal
+          show={isEditing}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+          className="share-story"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Share your amazing story!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group controlId="formFile" className="mb-3">
+                <Form.Text className="d-block mb-2">
+                  Upload your Picture
+                </Form.Text>
+                <span className="icon-container float-end mt-2 me-3">
+                  {image ? (
+                    <MdClear onClick={handleClearImage} className="clear-btn" />
+                  ) : (
+                    <MdOutlineAttachment className="attachment-icon" />
+                  )}
+                </span>
+                <Form.Label className="custom-input d-block w-100 ">
+                  <div className="file-label">
+                    {image ? image.name : "Choose Image"}
+                  </div>
+                </Form.Label>
+                <Form.Control
+                  type="file"
+                  ref={imageRef}
+                  hidden
+                  onChange={handleFileChange}
                 />
-                <Form.Check
-                  inline
-                  label="Vendor"
-                  name="identifier"
-                  type="radio"
-                  id="vendor"
-                  onChange={handleIdentifier}
-                />
-              </div>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label className="location-label">
-                City or Higher Institution (for Students)
-              </Form.Label>
-              <Form.Control type="text" ref={locationRef} />
-            </Form.Group>
-            <Form.Group>
-              <Button
-                type="button"
-                className="btn-lg float-end submit-btn"
-                onClick={handleClose}
+              </Form.Group>
+
+              <Row>
+                <Col>
+                  <Form.Group className="mb-3">
+                    <Form.Label>First Name</Form.Label>
+                    <Form.Control type="text" ref={firstNameRef} />
+                  </Form.Group>
+                </Col>
+                <Col>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Last Name</Form.Label>
+                    <Form.Control type="text" ref={lastNameRef} />
+                  </Form.Group>
+                </Col>
+              </Row>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Share your story</Form.Label>
+                <textarea
+                  className="form-control"
+                  rows={3}
+                  ref={textRef}
+                ></textarea>
+              </Form.Group>
+              <Form.Group
+                className="mb-3 d-flex justify-content-between"
+                controlId="formBasicCheckbox"
               >
-                Share your story!
+                <Form.Label className="check-label">
+                  What did you interact with Vasiti as?
+                </Form.Label>
+                <div className="d-flex">
+                  <Form.Check
+                    inline
+                    label="Customer"
+                    name="identifier"
+                    type="radio"
+                    id="customer"
+                    onChange={handleIdentifier}
+                  />
+                  <Form.Check
+                    inline
+                    label="Vendor"
+                    name="identifier"
+                    type="radio"
+                    id="vendor"
+                    onChange={handleIdentifier}
+                  />
+                </div>
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label className="location-label">
+                  City or Higher Institution (for Students)
+                </Form.Label>
+                <Form.Control type="text" ref={locationRef} />
+              </Form.Group>
+              <Form.Group>
+                <Button
+                  type="button"
+                  className="btn-lg float-end submit-btn"
+                  onClick={handleSubmit}
+                >
+                  Share your story!
+                </Button>
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+        </Modal>
+      ) : (
+        <Modal
+          show={isEditing && alreadyReviewed}
+          onHide={handleClose}
+          className="already-shared"
+        >
+          <Modal.Body className="p-5 text-center">
+            <div className="hurray-icon mb-4">🎉</div>
+            <h1 className="px-3 mb-4">Thank you for sharing your story!</h1>
+            <p className="mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div className="button-container mb-4">
+              <Button variant size="lg close-btn" onClick={handleClose}>
+                close
               </Button>
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-      </Modal>
+            </div>
+          </Modal.Body>
+        </Modal>
+      )}
     </>
   );
 };

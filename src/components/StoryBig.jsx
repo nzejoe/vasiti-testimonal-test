@@ -3,7 +3,7 @@ import { Image, Container } from 'react-bootstrap'
 
 import ShareStory from "./ShareStory";
 
-const StoryBig = ({ story}) => {
+const StoryBig = ({ story, addStoryHandler }) => {
   const [ isEditing, setIsEditing ] = useState(false);
   const {author, badge, text, image } = story;
 
@@ -23,8 +23,13 @@ const StoryBig = ({ story}) => {
             <p>{text}</p>
           </div>
           <div className="share-btn text-white">
-            <button className="bg-transparent text-white border-0 mt-5" onClick={()=>handleSetEditing(true)}>share your own story!</button>
-            <Image src="/images/vector 3.png" fluid/>
+            <button
+              className="bg-transparent text-white border-0 mt-5"
+              onClick={() => handleSetEditing(true)}
+            >
+              share your own story!
+            </button>
+            <Image src="/images/vector 3.png" fluid />
           </div>
         </div>
         <div className="story-image position-relative">
@@ -32,7 +37,13 @@ const StoryBig = ({ story}) => {
           <div className="eclipse"></div>
         </div>
       </Container>
-      { isEditing && <ShareStory handleEditing={handleSetEditing} isEditing={isEditing}/> }
+      {isEditing && (
+        <ShareStory
+          handleEditing={handleSetEditing}
+          isEditing={isEditing}
+          addStoryHandler={addStoryHandler}
+        />
+      )}
     </div>
   );
 };
