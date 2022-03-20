@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, Container } from 'react-bootstrap'
 
+import ShareStory from "./ShareStory";
+
 const StoryBig = ({ story}) => {
+  const [ isEditing, setIsEditing ] = useState(false);
   const {author, badge, text, image } = story;
+
+  const handleSetEditing = (bool) => {
+    setIsEditing(bool);
+  }
+
   return (
     <div className={`story-big pt-5`}>
       <Container className="story-inner d-md-flex align-items-center  justify-content-between">
@@ -15,7 +23,7 @@ const StoryBig = ({ story}) => {
             <p>{text}</p>
           </div>
           <div className="share-btn text-white">
-            <button className="bg-transparent text-white border-0 mt-5">share your own story!</button>
+            <button className="bg-transparent text-white border-0 mt-5" onClick={()=>handleSetEditing(true)}>share your own story!</button>
             <Image src="/images/vector 3.png" fluid/>
           </div>
         </div>
@@ -24,6 +32,7 @@ const StoryBig = ({ story}) => {
           <div className="eclipse"></div>
         </div>
       </Container>
+      { isEditing && <ShareStory /> }
     </div>
   );
 };

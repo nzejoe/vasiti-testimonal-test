@@ -8,6 +8,7 @@ import StorySmall from "./StorySmall";
 import { stories } from "../assets";
 
 const ExperienceStories = () => {
+
   return (
     <div className="experience-stories">
       <div className="section-1">
@@ -19,7 +20,6 @@ const ExperienceStories = () => {
             })}
           </Row>
         </Container>
-        <div className="stories-small"></div>
       </div>
       <div className="section-2">
         <StoryBig story={stories[7]} />
@@ -30,7 +30,6 @@ const ExperienceStories = () => {
             })}
           </Row>
         </Container>
-        <div className="stories-small"></div>
       </div>
     </div>
   );
